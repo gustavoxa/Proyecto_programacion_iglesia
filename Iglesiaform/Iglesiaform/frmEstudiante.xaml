@@ -1,0 +1,256 @@
+﻿<Window x:Class="Iglesiaform.frmEstudiante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iglesiaform"
+        mc:Ignorable="d"
+        Title="frmEstudiante" Width="1100" Height="890" >
+    <Window.Resources>
+        <!-- One style for each *type* of control on the window -->
+        <Style x:Key="MiEstilo1" TargetType="GroupBox">
+            <Setter Property="FontSize" Value="18"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo3" TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Height" Value="50" ></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Background" Value="#ff4170A2"></Setter>
+
+        </Style>
+
+        <!-- One style for each *type* of control on the window -->
+        <Style TargetType="GroupBox">
+
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="Header" Value="18" ></Setter>
+        </Style>
+
+    </Window.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Focusable="True" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" MinHeight="476" />
+                <RowDefinition Height="Auto" MinHeight="121" />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.ColumnSpan="5" Fill="#FF4170A2"/>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Foreground="White" Grid.Column="1" Height="69" Margin="162,0,157,2" Width="712"> Parroquia San Ignacio de Loyola</TextBlock>
+            <TextBlock Grid.ColumnSpan="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold"   Grid.Column="1" Height="34" Margin="358,5,355,12" Width="318" > Formulario Estudiante</TextBlock>
+            <GroupBox Style="{StaticResource MiEstilo1}" Grid.Row="2" Grid.Column="1" Header="Datos personales">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource MiEstilo2}" >
+                Nombres:
+                    </TextBlock>
+                    <TextBox x:Name="txtNombreE"/>
+                    <TextBlock Style="{StaticResource MiEstilo2}" >
+             Apellidos:
+                    </TextBlock>
+                    <TextBox x:Name="txtApeE"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="0" Grid.Column="0">C.I:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="0" x:Name="txtCedulaE"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="0" Grid.Column="2">Fecha de nacimiento:</TextBlock>
+                        <DatePicker Grid.Row="1" Grid.Column="2" x:Name="dpNaciE"/>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="2" Grid.Column="0">Telefono:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="0" x:Name="txtTelefE"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="2" Grid.Column="2">Celular:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="2" x:Name="txtCeluE"></TextBox>
+                    </Grid>
+                    <GroupBox Style="{StaticResource MiEstilo1}"  Header="Dirección">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}" >
+                        Calle Principal:
+
+                            </TextBlock >
+                            <TextBox x:Name="txtCallePrincE"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}" >
+                        Calle Secundaria:
+                            </TextBlock>
+
+                            <TextBox x:Name="txtCalleSecuE"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Column="0" Text="Número de casa:"/>
+                                <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Column="2" Text="Sector:"/>
+                                <TextBox  Grid.Row="1" x:Name="txtNumCasaE"/>
+                                <TextBox Grid.Row="1" Grid.Column="2" x:Name="txtSectorE"/>
+
+                            </Grid>
+                            <TextBlock Style="{StaticResource MiEstilo2}" >Referencia:</TextBlock>
+                            <TextBox x:Name="txtRefeDirecE"/>
+
+                        </StackPanel>
+
+                    </GroupBox>
+                    <TextBlock Style="{StaticResource MiEstilo2}" >Mis fortalezas:</TextBlock>
+                    <TextBox x:Name="txtFortaE"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="237*"/>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="237*"/>
+
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Column="0" Grid.Row="0">Tipo de Sangre:</TextBlock>
+                        <ComboBox Grid.Row="1" x:Name="cbxSangreE">
+                            <ComboBoxItem IsSelected="True">A +</ComboBoxItem>
+                            <ComboBoxItem>A -</ComboBoxItem>
+                            <ComboBoxItem>B +</ComboBoxItem>
+                            <ComboBoxItem>B -</ComboBoxItem>
+                            <ComboBoxItem>O +</ComboBoxItem>
+                            <ComboBoxItem>O -</ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Column="2" Grid.ColumnSpan="3">Alergias:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" x:Name="txtAlergiaE"/>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Column="0" Grid.Row="2">Taller:</TextBlock>
+                        <ComboBox Grid.Row="3" x:Name="cbxTallerE" >
+                            <ComboBoxItem IsSelected="True">Inglés</ComboBoxItem>
+                            <ComboBoxItem>Matemática</ComboBoxItem>
+                            <ComboBoxItem>Física</ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+
+                </StackPanel>
+
+            </GroupBox>
+            <GroupBox Style="{StaticResource MiEstilo1}"  Header="Datos familiares" Grid.Row="2" Grid.Column="3">
+                <StackPanel>
+                    <GroupBox Style="{StaticResource MiEstilo1}"  Header="Datos del padre">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}" >
+                Nombres:
+                            </TextBlock>
+                            <TextBox x:Name="txtNomPadreE"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}" >
+             Apellidos:
+                            </TextBlock>
+                            <TextBox x:Name="txtApePadreE"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}"  >
+             Ocupación:
+                            </TextBlock>
+                            <TextBox x:Name="txtOcupPadreE"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Style="{StaticResource MiEstilo1}"  Header="Datos de la madre">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}" ><Run Text="Nombres:"/></TextBlock>
+                            <TextBox  x:Name="txtNomMadreE"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}" ><Run Text="Apellidos:"/></TextBlock>
+                            <TextBox x:Name="txtApeMadreE"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}" ><Run Text="Ocupación:"/></TextBlock>
+                            <TextBox x:Name="txtOcupMadreE"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <TextBlock> En caso de emergencia:</TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <RadioButton Grid.Column="0" Content="Padre" x:Name="rbnPadreE"/>
+                        <RadioButton Grid.Column="2" Content="Madre" x:Name="rbnMadreE"/>
+                        <RadioButton Grid.Column="4" Content="Otros" x:Name="rbnOtros"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="0" Grid.Column="0">Comunicarse con:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="0" x:Name="txtComuniE" Height="26" VerticalAlignment="Bottom"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="0" Grid.Column="2">Parentesco:</TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="2" x:Name="txtParentE"/>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="2" Grid.Column="0">Telefono:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="0" x:Name="txtTelefEmergE"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="2" Grid.Column="2">Celular:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="2" x:Name="txtCeluEmergE"></TextBox>
+                    </Grid>
+                    <TextBlock Style="{StaticResource MiEstilo2}" > Consideraciones:</TextBlock>
+                    <TextBox x:Name="txtConsiEmergE"/>
+                    <Label>Vive con:</Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <RadioButton Grid.Column="0" Content="Padre" x:Name="rbnViveP"/>
+                        <RadioButton Grid.Column="2" Content="Madre" x:Name="rbnViveM"/>
+                        <RadioButton Grid.Column="4" Content="Abuelos" x:Name="rbnViveA"/>
+                        <RadioButton Grid.Column="6" Content="Otros" x:Name="rbnViveO"/>
+                        <TextBox Grid.Row="1" Grid.ColumnSpan="7" x:Name="txtViveOtro" Margin="8,0,12,0"/>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+            <Button  x:Name="btnGuardarFrmE" Style="{StaticResource MiEstilo3}"  Click="boton2_Click" Content="Cancelar" Grid.Column="3" HorizontalAlignment="Left" Margin="200,27,0,0" Grid.Row="3" VerticalAlignment="Top" />
+            <Button x:Name="btncancelarfrmE" Style="{StaticResource MiEstilo3}"  Click="boton1_Click" Content="Aceptar" Grid.Column="1" HorizontalAlignment="Left" Margin="207,23,0,0" Grid.Row="3" VerticalAlignment="Top" />
+
+        </Grid>
+    </ScrollViewer>
+</Window>
