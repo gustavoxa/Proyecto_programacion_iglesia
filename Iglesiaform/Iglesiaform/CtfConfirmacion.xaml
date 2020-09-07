@@ -1,0 +1,56 @@
+﻿<Window x:Class="Iglesiaform.CtfConfirmacion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iglesiaform"
+        mc:Ignorable="d"
+        Title="CtfConfirmacion" Height="500" Width="720" >
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="105" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Label Content="Certificado de Confirmacion " HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="72" Height="90" Width="657" Margin="37,13,18,3" Grid.Row="1" FontFamily="Pristina" Foreground="#FFE44026"  />
+
+        <Label Content="Certifico que "  Margin="172,0,70,3" Grid.Row="2" VerticalAlignment="Center" />
+        <TextBlock x:Name="tbkNomBauti" HorizontalAlignment="Left" Margin="354,5,0,5" Grid.Row="2" TextWrapping="Wrap" Text="r" VerticalAlignment="Center"/>
+        <TextBlock x:Name="tbkApeBauti" HorizontalAlignment="Left" Margin="466,5,0,5" Grid.Row="2" TextWrapping="Wrap" Text="r" VerticalAlignment="Center"/>
+        <Label Content="Recibió los sacramentos y dones del Espirituo Santo " HorizontalAlignment="center" Margin="53,0,10,0" Grid.Row="3" VerticalAlignment="center" FontSize="36" FontFamily="Vivaldi" Height="51" Width="649"/>
+        <Label Content="En la Iglesia San Ignacio de Loyola" HorizontalAlignment="Left" Margin="242,0,0,0" Grid.Row="4" VerticalAlignment="center"/>
+
+        <TextBlock x:Name="tbkFecha" HorizontalAlignment="Left" Margin="285,4,0,4" Grid.Row="5" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="del mes de" HorizontalAlignment="Left" Margin="339,0,0,1" Grid.Row="5" VerticalAlignment="center"/>
+        <TextBlock x:Name="tbkMes" HorizontalAlignment="Left" Margin="462,4,0,4" Grid.Row="5" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="en el año" HorizontalAlignment="Left" Margin="500,0,0,0" Grid.Row="5" VerticalAlignment="center"/>
+        <TextBlock x:Name="tbkAno" HorizontalAlignment="Left" Margin="605,3,0,4" Grid.Row="5" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="Más aún, derramaré mi Espíritu sobre mis servidores y &#xD;&#xA;servidoras, y ellos profetizarán(Hechos 2,18)" HorizontalAlignment="Left" Grid.Row="6" Margin="265,1,0,6" VerticalAlignment="center" FontSize ="16" FontFamily="Segoe Print"/>
+        <TextBlock x:Name="tbkNomParroco" HorizontalAlignment="Left" Margin="394,10,0,10" Grid.Row="7" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <TextBlock x:Name="tbkApeParroco" HorizontalAlignment="Right" Margin="0,10,196,10" Grid.Row="7" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="Parroco" HorizontalAlignment="Left"  Margin="420,9,0,12"   Grid.Row="8" VerticalAlignment="center" />
+        <Image Margin="242,10,396,-2" Source="grbfn.png" Stretch="Fill" Grid.Row="7" Grid.RowSpan="2"/>
+        <Image Margin="10,-6,0,-43" Source="margenConfirmacion.png" Stretch="Fill" Grid.RowSpan="9"/>
+        <Image Margin="0,0,452,19" Grid.RowSpan="5" Source="ImagenConfirmacion.png" Stretch="Fill" Grid.Row="4"/>
+
+    </Grid>
+</Window>
