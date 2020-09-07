@@ -1,0 +1,85 @@
+﻿<Window x:Class="Iglesiaform.frmListados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iglesiaform"
+        mc:Ignorable="d"
+        Title="frmListados" Height="485" Width="850">
+    <Window.Resources>
+        <!-- One style for each *type* of control on the window -->
+        <Style x:Key="MiEstilo1" TargetType="RadioButton">
+            <Setter Property="FontSize" Value="18"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo3" TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Height" Value="50" ></Setter>
+            <Setter Property="Width" Value="170"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Background" Value="#ff4170A2"></Setter>
+
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*" />
+            <ColumnDefinition Width="404*"/>
+            <ColumnDefinition Width="274*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition />
+            <RowDefinition Height="79"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Grid.ColumnSpan="5" Fill="#FF4170A2"/>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Foreground="White" Margin="53,2,51,1" Height="67" Width="706" Grid.Column="1"> Parroquia San Ignacio de Loyola</TextBlock>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Grid.Column="1" Margin="335,5,225,5" Height="40" Width="118">Listados</TextBlock>
+        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18" Margin="0,10,9,16" Width="163" Text="Curso:" Grid.Column="1" Height="24"/>
+        <Button x:Name="btnNuevaCons" Style="{StaticResource MiEstilo3}" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="51,15,183,14"  Content="Nuevo Consulta" Click="btnNuevaCons_Click"/>
+        <Button Click="boton2_Click" x:Name="btnCancelar" Style="{StaticResource MiEstilo3}" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="179,15,57,14" Grid.ColumnSpan="2" >Cancelar</Button>
+        <ComboBox x:Name="cbxCurso" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="center" Grid.Column="2" Margin="28,14,3,14" SelectionChanged="cbxCurso_SelectionChanged_1" Height="22">
+            <ComboBoxItem IsSelected="True">Sacramento</ComboBoxItem>
+            <ComboBoxItem>Taller</ComboBoxItem>
+
+        </ComboBox>
+        <TabControl Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="876,0,-961,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100">
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <DataGrid x:Name="dgListadoAulaF" HorizontalAlignment="Center" Height="139"  Grid.Row="5" VerticalAlignment="Center" Width="364" Grid.ColumnSpan="3" Margin="8,31,19,0" CanUserAddRows="False" ItemsSource="{Binding}"  IsReadOnly="True"  Grid.Column="1">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform />
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <ComboBox x:Name="cbxPeriodo" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="center" Grid.Column="2" Margin="29,14,3,14" SelectionChanged="cbxPeriodo_SelectionChanged" Height="22">
+            <ComboBoxItem IsSelected="True">2020-A</ComboBoxItem>
+            <ComboBoxItem>2020-B</ComboBoxItem>
+
+        </ComboBox>
+        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18" Margin="0,14,7,12" Width="164" Grid.Column="1" Height="24"><Run Text="Periodo:"/></TextBlock>
+
+    </Grid>
+</Window>
