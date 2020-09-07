@@ -1,0 +1,55 @@
+﻿<Window x:Class="Iglesiaform.CtfComunion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iglesiaform"
+        mc:Ignorable="d"
+        Title="CtfComunion" Height="500" Width="720" >
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="105" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Image Source="marcoComunion.png" Grid.RowSpan="9" Stretch="Fill" Margin="0,0,0,-30"/>
+        <Image Margin="59,0,412,23" Source="pngocean.com.png"  Grid.RowSpan="5" Stretch="Fill" Grid.Row="4"/>
+        <Label Content="Certificado de Comunion " HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Vivaldi" FontSize="72" Height="85" Width="586" Margin="63,11,63,10" Grid.Row="1" Foreground="#FF141CCD"  />
+
+        <Label Content="Certifico que "  Margin="242,0,0,0" Grid.Row="2" VerticalAlignment="Center" />
+        <TextBlock x:Name="tbkNomBauti" HorizontalAlignment="Left" Margin="420,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="r" VerticalAlignment="Center"/>
+        <TextBlock x:Name="tbkApeBauti" HorizontalAlignment="Left" Margin="520,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="r" VerticalAlignment="Center"/>
+        <Label Content="Recibió la santisima Eucaristía " HorizontalAlignment="center" Margin="175,0,0,0" Grid.Row="3" VerticalAlignment="center" FontSize="36" FontFamily="Vivaldi"/>
+        <Label Content="En la Iglesia San Ignacio de Loyola" HorizontalAlignment="Left" Margin="242,0,0,0" Grid.Row="4" VerticalAlignment="center"/>
+
+        <TextBlock x:Name="tbkFecha" HorizontalAlignment="Left" Margin="285,4,0,4" Grid.Row="5" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="del mes de" HorizontalAlignment="Left" Margin="339,0,0,1" Grid.Row="5" VerticalAlignment="center"/>
+        <TextBlock x:Name="tbkMes" HorizontalAlignment="Left" Margin="462,4,0,4" Grid.Row="5" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="en el año" HorizontalAlignment="Left" Margin="500,0,0,0" Grid.Row="5" VerticalAlignment="center"/>
+        <TextBlock x:Name="tbkAno" HorizontalAlignment="Left" Margin="605,3,0,4" Grid.Row="5" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="Yo soy la luz del mundo; el que me siga &#xD;&#xA; no caminará en la oscuridad (Juan 8, 12)" HorizontalAlignment="Left" Grid.Row="6" Margin="285,0,0,5" VerticalAlignment="center" FontSize ="16" FontFamily="Segoe Print"/>
+        <TextBlock x:Name="tbkNomParroco" HorizontalAlignment="Left" Margin="394,10,0,10" Grid.Row="7" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <TextBlock x:Name="tbkApeParroco" HorizontalAlignment="Right" Margin="0,10,196,10" Grid.Row="7" TextWrapping="Wrap" Text="r" VerticalAlignment="center"/>
+        <Label Content="Parroco" HorizontalAlignment="Left"  Margin="420,0,0,20"   Grid.Row="8" VerticalAlignment="center" />
+        <Image Margin="148,10,520,29" Source="grbfn.png" Stretch="Fill" Grid.RowSpan="2" Grid.Row="2"/>
+    </Grid>
+</Window>
