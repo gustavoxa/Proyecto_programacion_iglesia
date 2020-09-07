@@ -1,0 +1,64 @@
+﻿<Window x:Class="Iglesiaform.frmBusquedaFeligreses"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iglesiaform"
+        mc:Ignorable="d"
+        Title="frmBusquedaFeligreses" Height="500" Width="1000">
+    <Window.Resources>
+
+        <!-- One style for each *type* of control on the window -->
+        <Style x:Key="MiEstilo1" TargetType="GroupBox">
+            <Setter Property="FontSize" Value="18"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo3" TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Height" Value="50" ></Setter>
+            <Setter Property="Width" Value="170"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Background" Value="#ff4170A2"></Setter>
+
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="126*" />
+            <ColumnDefinition Width="312*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition />
+            <RowDefinition Height="77"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Grid.ColumnSpan="8" Fill="#FF4170A2"/>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Foreground="White" Height="69" Margin="89,-2,82,3" Width="708" Grid.Column="2"> Parroquia San Ignacio de Loyola</TextBlock>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Height="40" Margin="303,5,286,5" Width="290" Grid.Column="2" > Búsqueda Feligreses</TextBlock>
+        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Height="40" Margin="56,6,40,4" Width="154" Grid.Column="3" RenderTransformOrigin="0.734,0.865" Grid.ColumnSpan="2">Ingrese la cedula</TextBlock>
+        <TextBox x:Name="txtCedulaF" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Width="320" Height="26" Margin="265,12,252,12" Grid.Column="2" MaxLength="10"/>
+        <Button x:Name="btnNuevaConsF" Style="{StaticResource MiEstilo3}" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="83,14,64,13" Content="Nuevo Consulta" Click="btnNuevaConsF_Click"/>
+        <Button x:Name="btnCancelarConsF" Style="{StaticResource MiEstilo3}" Grid.Row="6" Grid.Column="5" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="54,12,88,15"  Content="Cancelar" Click="btnCancelarConsF_Click"/>
+        <DataGrid x:Name="dgListadoF" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="128" Grid.Row="5" VerticalAlignment="center" Width="874" CanUserAddRows="False" ItemsSource="{Binding}"  IsReadOnly="True" Grid.Column="2" Margin="1,5,4,19"/>
+    </Grid>
+</Window>
+
