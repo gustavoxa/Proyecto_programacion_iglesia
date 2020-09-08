@@ -1,0 +1,361 @@
+﻿<Window x:Class="Iglesiaform.InscripcionSacramentos"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iglesiaform"
+        mc:Ignorable="d"
+        Title="Inscripciones Sacramentos" Height="1270" Width="1020">
+    <Window.Resources>
+
+        <!-- One style for each *type* of control on the window -->
+        <Style x:Key="MiEstilo1" TargetType="GroupBox">
+            <Setter Property="FontSize" Value="18"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo3" TargetType="RadioButton">
+            <Setter Property="FontSize" Value="18"></Setter>
+
+        </Style>
+        <Style x:Key="MiEstilo4" TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Height" Value="50" ></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Background" Value="#ff4170A2"></Setter>
+
+        </Style>
+    </Window.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="Auto" MinHeight="554" />
+                <RowDefinition Height="Auto" MinHeight="369" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.ColumnSpan="4" Fill="#FF4170A2"/>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Foreground="White" Grid.Column="1" Margin="153,4,140,3" Height="68" Width="707"> Parroquia San Ignacio de Loyola</TextBlock>
+            <TextBlock Grid.ColumnSpan="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Height="40" Margin="332,6,332,49" Width="336" Grid.RowSpan="2" > Inscripcion Catequizado</TextBlock>
+
+            <GroupBox Style="{StaticResource MiEstilo1}" Grid.Row="4" Grid.Column="1" Header="Datos personales">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource MiEstilo2}">
+                Nombres:
+                    </TextBlock>
+                    <TextBox x:Name="txtNombreCz"/>
+                    <TextBlock Style="{StaticResource MiEstilo2}">
+             Apellidos:
+                    </TextBlock>
+                    <TextBox x:Name="txtApeCz"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="0" Grid.Column="0">C.I</TextBlock>
+                        <TextBox x:Name="txtCedulaCz" Grid.Row="1" Grid.Column="0"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="0" Grid.Column="2">Fecha de nacimiento</TextBlock>
+                        <DatePicker x:Name="dpNaciCz" Grid.Row="1" Grid.Column="2" Height="32" VerticalAlignment="Bottom"/>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="0">Telefono</TextBlock>
+                        <TextBox x:Name="txtTelefCz" Grid.Row="3" Grid.Column="0"></TextBox>
+                        <TextBlock  Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="2">Celular</TextBlock>
+                        <TextBox x:Name="txtCeluCz" Grid.Row="3" Grid.Column="2"></TextBox>
+                    </Grid>
+                    <GroupBox Header="Dirección">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}">
+                        Calle Principal
+
+                            </TextBlock>
+                            <TextBox x:Name="txtCallePrincCz"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}">
+                        Calle Secundaria
+                            </TextBlock>
+
+                            <TextBox x:Name="txtCalleSecuCz_"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="0" Text="Número de casa"/>
+                                <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="2" Text="Sector"/>
+                                <TextBox x:Name="txtNumCasaCz"  Grid.Row="1"/>
+                                <TextBox x:Name="txtSectorCz" Grid.Row="1" Grid.Column="2"/>
+
+                            </Grid>
+                            <TextBlock Style="{StaticResource MiEstilo2}" >Referencia</TextBlock>
+                            <TextBox x:Name="txtRefeDirecCz"/>
+
+                        </StackPanel>
+
+                    </GroupBox>
+                    <TextBlock Style="{StaticResource MiEstilo2}">Mis fortalezas</TextBlock>
+                    <TextBox x:Name="txtFortaCz"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="0" Grid.Row="0">Tipo de Sangre</TextBlock>
+                        <ComboBox x:Name="cbxSangreCz" Grid.Row="1" >
+                            <ComboBoxItem IsSelected="True">A +</ComboBoxItem>
+                            <ComboBoxItem>A -</ComboBoxItem>
+                            <ComboBoxItem>B +</ComboBoxItem>
+                            <ComboBoxItem>B -</ComboBoxItem>
+                            <ComboBoxItem>O +</ComboBoxItem>
+                            <ComboBoxItem>O -</ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="2">Alergias</TextBlock>
+                        <TextBox x:Name="txtAlergiaCz" Grid.Row="1" Grid.Column="2"/>
+                    </Grid>
+                </StackPanel>
+
+            </GroupBox>
+            <GroupBox Style="{StaticResource MiEstilo1}" Header="Datos familiares" Grid.Row="4" Grid.Column="3">
+                <StackPanel>
+                    <GroupBox Header="Datos del padre">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}">
+                Nombres:
+                            </TextBlock>
+                            <TextBox x:Name="txtNomPadreCz"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}">
+             Apellidos:
+                            </TextBlock>
+                            <TextBox x:Name="txtApePadreCz"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}">
+             Ocupación:
+                            </TextBlock>
+                            <TextBox x:Name="txtOcupPadreCz"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Datos de la madre">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}"><Run Text="Nombres:"/></TextBlock>
+                            <TextBox x:Name="txtNomMadreCz"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}"><Run Text="Apellidos:"/></TextBlock>
+                            <TextBox x:Name="txtApeMadreCz"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}"><Run Text="Ocupación:"/></TextBlock>
+                            <TextBox x:Name="txtOcupMadreCz"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <TextBlock> En caso de emergencia</TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="0" Grid.Column="0">Comunicarse con</TextBlock>
+                        <TextBox x:Name="txtComuniCz" Grid.Row="1" Grid.Column="0"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="0" Grid.Column="2">Parentesco</TextBlock>
+                        <TextBox x:Name="txtParentCz" Grid.Row="1" Grid.Column="2"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="0">Telefono</TextBlock>
+                        <TextBox x:Name="txtTelefEmergCz" Grid.Row="3" Grid.Column="0"></TextBox>
+                        <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="2">Celular</TextBlock>
+                        <TextBox x:Name="txtCeluEmergCz" Grid.Row="3" Grid.Column="2"></TextBox>
+                    </Grid>
+                    
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Style="{StaticResource MiEstilo1}" Grid.Column="1" Grid.Row="5" Header="">
+
+                <StackPanel>
+                    <GroupBox Header=" Sacramentos aprobados">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="8"/>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition/>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="4"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="4"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="4"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="4"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="0">Bautismo</TextBlock>
+                            <CheckBox x:Name="cbBautismo" Grid.Column="2"/>
+                           
+                            <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="0" Grid.Row="2">Primero de comunión</TextBlock>
+                            <CheckBox x:Name="cbPrimeraComunion" Grid.Column="2" Grid.Row="2"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="0" Grid.Row="4">Segundo de comunión</TextBlock>
+                            <CheckBox x:Name="cbSegundoComunion" Grid.Column="2" Grid.Row="4"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="0" Grid.Row="6">Primera confirmacion</TextBlock>
+                            <CheckBox x:Name="cbPrimeraConfirmacion" Grid.Column="2" Grid.Row="6"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="0" Grid.Row="8">Segunda  confirmacion</TextBlock>
+                            <CheckBox x:Name="cbSegundoConfirmacion" Grid.Column="2" Grid.Row="8"/>
+
+                        </Grid>
+                    </GroupBox>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0">Fecha de celebracion para:</TextBlock>
+                        <TextBox x:Name="txtCeleSacramento" Grid.Row="2" Grid.Column="2"></TextBox>
+
+
+                    </Grid>
+
+                    <GroupBox Style="{StaticResource MiEstilo1}" Header="">
+                        <DatePicker x:Name="dpFechaCele" Grid.Row="1" Grid.Column="2"/>
+                    </GroupBox>
+                </StackPanel>
+            </GroupBox>
+
+
+
+            <RadioButton x:Name="rbnBautizo" Style="{StaticResource MiEstilo3}" Content="Bautizo" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="2" VerticalAlignment="Center" Margin="100,14,0,14" Height="22" Width="78"/>
+            <RadioButton x:Name="rbnComunion" Style="{StaticResource MiEstilo3}" Content="Comunion" Grid.Column="1" HorizontalAlignment="Right"  Grid.Row="2" VerticalAlignment="Center" Margin="0,14,100,14" Height="22" Width="102"/>
+            <RadioButton x:Name="rbnConfirmacion" Style="{StaticResource MiEstilo3}" Content="Confirmacion" Grid.Column="3" HorizontalAlignment="Left"  Grid.Row="2" VerticalAlignment="Center" Margin="100,14,0,14" Height="22" Width="125"/>
+            <RadioButton x:Name="rbnMatrimonio" Style="{StaticResource MiEstilo3}" Content="Matrimonio" Grid.Column="3" HorizontalAlignment="Right"  Grid.Row="2" VerticalAlignment="Center" Margin="0,14,100,14" Height="22" Width="112" Checked="rbnMatrimonio_Checked"/>
+            <TextBlock Style="{StaticResource MiEstilo2}" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="3" TextWrapping="Wrap" Text="C.I" VerticalAlignment="Center" Margin="300,9,0,25" Height="20" Width="32" />
+            <TextBox x:Name="txtBusqCeduCz" Grid.ColumnSpan="4" Margin="350,5,350,22" HorizontalAlignment="Center" Height="26"  Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="300" MaxLength="10"/>
+            <GroupBox Style="{StaticResource MiEstilo1}" Grid.Column="3" Grid.Row="5" Header="Padrinos">
+                <StackPanel>
+                    <GroupBox Header="Padrino 1">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}">
+                Nombres:
+                            </TextBlock>
+                            <TextBox x:Name="txtNomPadrino1"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}">
+             Apellidos:
+                            </TextBlock>
+                            <TextBox x:Name="txtApePadrino1"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="0">Correo</TextBlock>
+                                <TextBox x:Name="txtCorreoPadrino1" Grid.Row="3" Grid.Column="0"></TextBox>
+                                <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="2">Celular</TextBlock>
+                                <TextBox x:Name="txtCeluPadrino1" Grid.Row="3" Grid.Column="2"></TextBox>
+                            </Grid>
+
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Padrino 2">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource MiEstilo2}"><Run Text="Nombres:"/></TextBlock>
+                            <TextBox x:Name="txtNomPadrino2"/>
+                            <TextBlock Style="{StaticResource MiEstilo2}"><Run Text="Apellidos:"/></TextBlock>
+                            <TextBox x:Name="txtApePadrino2"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="0">Correo</TextBlock>
+                                <TextBox x:Name="txtCorreoPadrino2" Grid.Row="3" Grid.Column="0"></TextBox>
+                                <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="2">Celular</TextBlock>
+                                <TextBox x:Name="txtCeluPadrino2" Grid.Row="3" Grid.Column="2"></TextBox>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+
+
+
+
+                </StackPanel>
+            </GroupBox>
+            <Button  x:Name="btnGuardarFrmI" Style="{StaticResource MiEstilo4}"   Content="Cancelar" Grid.Column="3" HorizontalAlignment="Left" Margin="200,14,0,-3" Grid.Row="6" VerticalAlignment="Top" Click="btnGuardarFrmI_Click"  />
+            <Button x:Name="btncancelarfrmI" Style="{StaticResource MiEstilo4}"   Content="Aceptar" Grid.Column="1" HorizontalAlignment="Left" Margin="207,11,0,0" Grid.Row="6" VerticalAlignment="Top" Click="btncancelarfrmI_Click"  />
+            <Button Content="Buscar" Grid.Column="3" HorizontalAlignment="Left" Margin="225,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        </Grid>
+
+    </ScrollViewer>
+</Window>
+
