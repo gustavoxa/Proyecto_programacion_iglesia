@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,24 +33,11 @@ namespace Iglesiaform
             form1.ShowDialog();
             this.Close();
         }
+        
         private void boton1_Click(object sender, RoutedEventArgs e) 
         {
-            if (cbInBautismo.IsChecked == true && cbInPrimeraComunion.IsChecked==false)
-            { 
-                Console.WriteLine("Bautismo aprobado");
-            }
-            if (cbInBautismo.IsChecked == true && cbInPrimeraComunion.IsChecked == true && cbInSegundoComunion.IsChecked==false)
-            {
-                Console.WriteLine("Primer nivel de comunion aprobado");
-            }
-            if (cbInBautismo.IsChecked == true && cbInPrimeraComunion.IsChecked == true && cbInSegundoComunion.IsChecked == true && cbInPrimeraConfirmacion.IsChecked == false)
-            {
-                Console.WriteLine("Segundo nivel de comunion aprobado");
-            }
-            if (cbInBautismo.IsChecked == true && cbInPrimeraComunion.IsChecked == true && cbInSegundoComunion.IsChecked == true && cbInPrimeraConfirmacion.IsChecked == true && cbInSegundoConfirmacion.IsChecked == false)
-            {
-                Console.WriteLine("Primer nivel de confirmacion aprobado");
-            }
+           
+           
  
         }
 
