@@ -287,7 +287,7 @@
                 </Grid>
             </GroupBox>
             <Button Style="{StaticResource MiEstilo3}"  Click="boton2_Click" Content="Cancelar" Grid.Column="3" Grid.Row="4"  HorizontalAlignment="Center"  VerticalAlignment="Center"   Margin="200,22,200,28" x:Name="BtcancelarC" />
-            <Button Style="{StaticResource MiEstilo3}"  Content="Aceptar" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"   Margin="203,22,197,28" x:Name="BtaceptarC" />
+            <Button Style="{StaticResource MiEstilo3}"  Click="boton1_Click"  Content="Aceptar" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"   Margin="203,22,197,28" x:Name="BtaceptarC" />
             <Rectangle Grid.Row="5" Grid.ColumnSpan="4" Fill="AliceBlue" Height="20" VerticalAlignment="Stretch" Grid.Column="1" />
         </Grid>
     </ScrollViewer>
