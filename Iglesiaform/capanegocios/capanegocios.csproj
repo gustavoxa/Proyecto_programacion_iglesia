@@ -46,6 +46,7 @@
     <Compile Include="InscripcionEventosS.cs" />
     <Compile Include="Instru_cate_estu_catezdo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingletonTaller.cs" />
     <Compile Include="Taller.cs" />
     <Compile Include="validacionCedula.cs" />
   </ItemGroup>
