@@ -9,8 +9,9 @@ namespace CapaDatos
 {
     public class Class1
     {
-        protected SqlConnection Conexion = new SqlConnection("Server=XAVIER\\SQLEXPRESS;Database=Parroquia5;Integrated Security=True");
-         //SqlConnection Conexion = new SqlConnection("Data Source=dell\\debianlock;Initial Catalog=Parroquia6;Integrated Security=True");
+        //protected SqlConnection Conexion = new SqlConnection("Server=XAVIER\\SQLEXPRESS;Database=Parroquia5;Integrated Security=True");
+        //SqlConnection Conexion = new SqlConnection("Data Source=dell\\debianlock;Initial Catalog=Parroquia6;Integrated Security=True");
+        protected SqlConnection Conexion = new SqlConnection("Data Source=DESKTOP-N49GT0O;Initial Catalog=Parroquia6;Integrated Security=True");
         public Class1() { }
         public SqlConnection AbrirConexion()
         {
