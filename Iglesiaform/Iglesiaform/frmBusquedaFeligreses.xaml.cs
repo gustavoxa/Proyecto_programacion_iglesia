@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data;
+using capanegocios;
 using Capadenegocios;
 
 namespace Iglesiaform
@@ -21,6 +22,7 @@ namespace Iglesiaform
 	/// </summary>
 	public partial class frmBusquedaFeligreses : Window
 	{
+		Programa programa = new capanegocios.Programa();
 		DataTable misCateEstudiante;
 		validacionCedula v1 = new validacionCedula();
 		Instru_cate_est_catezdo mp = new Instru_cate_est_catezdo();
@@ -56,7 +58,7 @@ namespace Iglesiaform
 				MessageBox.Show("Ingrese primero el numero de cedula");
 			}
 
-
+			programa.PS();
 
 
 		}
@@ -68,6 +70,9 @@ namespace Iglesiaform
 			this.Close();
 		}
 
+		
 
+		
+
+		}
 	}
-}
