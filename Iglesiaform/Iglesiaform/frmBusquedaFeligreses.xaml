@@ -58,7 +58,7 @@
         <TextBox x:Name="txtCedulaF" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Width="320" Height="26" Margin="265,12,252,12" Grid.Column="2" MaxLength="10"/>
         <Button x:Name="btnNuevaConsF" Style="{StaticResource MiEstilo3}" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="83,14,64,13" Content="Nuevo Consulta" Click="btnNuevaConsF_Click"/>
         <Button x:Name="btnCancelarConsF" Style="{StaticResource MiEstilo3}" Grid.Row="6" Grid.Column="5" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="54,12,88,15"  Content="Cancelar" Click="btnCancelarConsF_Click"/>
-        <DataGrid x:Name="dgListadoF" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="128" Grid.Row="5" VerticalAlignment="center" Width="874" CanUserAddRows="False" ItemsSource="{Binding}"  IsReadOnly="True" Grid.Column="2" Margin="1,5,4,19"/>
+        <DataGrid x:Name="dgListadoF" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="78" Grid.Row="5" VerticalAlignment="center" Width="634" CanUserAddRows="False" ItemsSource="{Binding}"  IsReadOnly="True" Grid.Column="2" Margin="127,50,118,24"/>
     </Grid>
 </Window>
 
