@@ -46,10 +46,8 @@ namespace Capadenegocios
             listadir.Add(new ParametrosDB("@ref", referencia));
             listadir.Add(new ParametrosDB("@sector", sector));
             basedatos.EjecutarProcedimiento("Ingreso_Direccion", listadir);
-
         }
-
-        // busqueda feligreses
+            // busqueda feligreses
         public DataTable BuscarFeligreses(String cedula)
         {
             return basedatos.BuscarFeligreses(cedula);
