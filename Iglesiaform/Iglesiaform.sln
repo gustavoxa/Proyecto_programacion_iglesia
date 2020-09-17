@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iglesiaform", "Iglesiaform\Iglesiaform.csproj", "{90B53CFF-5E31-4EB8-BB8E-B4710CAA987E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6297B9C-BD06-4AE5-95B0-E2EF9D6F0588}"
-	ProjectSection(SolutionItems) = preProject
-		Capadenegocios\Capadenegocios.csproj = Capadenegocios\Capadenegocios.csproj
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{08AF291C-A314-4A52-90EE-CA79A8DC118A}"
 EndProject
