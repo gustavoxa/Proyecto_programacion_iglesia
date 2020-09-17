@@ -12,8 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
-using negocios;
+using Capadenegocios;
+using capanegocios;
 
 namespace Iglesiaform
 {
@@ -33,11 +33,12 @@ namespace Iglesiaform
            // string a = "Hi";
            // nv.txtEsposo.Text = a;
         }
-        Taller metodo = new Taller();
         private void boton1_Click(object sender, RoutedEventArgs e)
         {
-            metodo.guardar(txtNombreE.Text);
 
+
+            Instru_cate_est_catezdo instru_Cate = new Instru_cate_est_catezdo();
+            instru_Cate.guardardireccion(txtCallePrincE.Text, txtCalleSecuE.Text, txtNumCasaE.Text, txtRefeDirecE.Text, txtSectorE.Text);
         }
 
         private void boton2_Click(object sender, RoutedEventArgs e)
