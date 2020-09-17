@@ -130,12 +130,12 @@ namespace Iglesiaform
         private void PConformacion_Click(object sender, RoutedEventArgs e)
         {
             frmCatequizado catequizadopcf = new frmCatequizado();
-            // Primero Confirmación
+            // Primero Comunion
             catequizadopcf.tbdInPrimeraConfirmacion.Visibility = Visibility.Hidden;
             catequizadopcf.cbInPrimeraConfirmacion.Visibility = Visibility.Hidden;
             catequizadopcf.tbpInPrimeraConfirmacion.Visibility = Visibility.Hidden;
             catequizadopcf.txtInPconfirmacionP.Visibility = Visibility.Hidden;
-            // Segundo Confirmación
+            // Segundo Comunion
             catequizadopcf.tbdSegundoConfirmacion.Visibility = Visibility.Hidden;
             catequizadopcf.cbInSegundoConfirmacion.Visibility = Visibility.Hidden;
             catequizadopcf.tbpSegundoConfirmacion.Visibility = Visibility.Hidden;
