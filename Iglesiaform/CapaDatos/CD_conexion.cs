@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public class Class1
     {
-        protected SqlConnection Conexion = new SqlConnection("Server=XAVIER\\SQLEXPRESS;Database=Parroquia5;Integrated Security=True");
+         SqlConnection Conexion = new SqlConnection("Server=XAVIER\\SQLEXPRESS;Database=Parroquia7;Integrated Security=True");
          //SqlConnection Conexion = new SqlConnection("Data Source=dell\\debianlock;Initial Catalog=Parroquia6;Integrated Security=True");
         public Class1() { }
         public SqlConnection AbrirConexion()
@@ -341,6 +341,27 @@ namespace CapaDatos
             }
             return dt;
         }
+        public DataSet ultimoregistro(String _nombreproc)
+        {
+            SqlCommand sqlcmd;
+            try
+            {
+                AbrirConexion();
+                sqlcmd = new SqlCommand(_nombreproc, Conexion);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            
+        }
+
 
     }
 }
