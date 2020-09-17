@@ -140,7 +140,7 @@
                         <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Column="0" Grid.Row="0">Tipo de Sangre:</TextBlock>
                         <ComboBox Grid.Row="1" x:Name="cbxSangreE">
                             <ComboBoxItem IsSelected="True">A +</ComboBoxItem>
-                            <ComboBoxItem>A -</ComboBoxItem>
+                            <ComboBoxItem >A -</ComboBoxItem>
                             <ComboBoxItem>B +</ComboBoxItem>
                             <ComboBoxItem>B -</ComboBoxItem>
                             <ComboBoxItem>O +</ComboBoxItem>
