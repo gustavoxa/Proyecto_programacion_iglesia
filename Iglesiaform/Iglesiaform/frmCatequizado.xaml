@@ -182,9 +182,9 @@
                             <ColumnDefinition Width="10"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <RadioButton x:Name="rbnInPadreCz" Grid.Column="0" Content="Padre"/>
-                        <RadioButton x:Name="rbnInMadreCz" Grid.Column="2" Content="Madre"/>
-                        <RadioButton x:Name="rbnInOtros" Grid.Column="4" Content="Otros"/>
+                        <RadioButton Click="rbnInVive3_Click" x:Name="rbnInPadreCz" Grid.Column="0" Content="Padre"/>
+                        <RadioButton Click="rbnInVive3_Click" x:Name="rbnInMadreCz" Grid.Column="2" Content="Madre"/>
+                        <RadioButton Click="rbnInVive2_Click" x:Name="rbnInOtros" Grid.Column="4" Content="Otros"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -203,9 +203,9 @@
                         <TextBlock Style="{StaticResource MiEstilo2}"  Grid.Row="0" Grid.Column="2">Parentesco:</TextBlock>
                         <TextBox x:Name="txtInParentCz" Grid.Row="1" Grid.Column="2"></TextBox>
                         <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="0">Telefono:</TextBlock>
-                        <TextBox x:Name="txtInTelefEmergCz" Grid.Row="3" Grid.Column="0"></TextBox>
+                        <TextBox x:Name="txtInTelefEmergCz" Grid.Row="3" Grid.Column="0" Height="25"></TextBox>
                         <TextBlock Style="{StaticResource MiEstilo2}" Grid.Row="2" Grid.Column="2">Celular:</TextBlock>
-                        <TextBox x:Name="txtInCeluEmergCz" Grid.Row="3" Grid.Column="2"></TextBox>
+                        <TextBox x:Name="txtInCeluEmergCz" Grid.Row="3" Grid.Column="2" Height="25"></TextBox>
                     </Grid>
                     <TextBlock Style="{StaticResource MiEstilo2}" > Consideraciones:</TextBlock>
                     <TextBox x:Name="txtInConsiEmergCz"/>
@@ -262,7 +262,7 @@
             </GroupBox>
 
             <GroupBox Style="{StaticResource MiEstilo1}" Grid.Column="3" Grid.Row="3" Header="Vive con:"  x:Name="Bgvivecon">
-                <Grid>
+                <Grid Margin="0,0,0,66">
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -276,19 +276,29 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20"/>
                         <RowDefinition Height="10"/>
-                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
                     </Grid.RowDefinitions>
 
-                    <RadioButton Grid.Column="0" Content="Padre" x:Name="rbnInViveP" Height="20"/>
-                    <RadioButton Grid.Column="2" Content="Madre" x:Name="rbnInViveM" Height="20"/>
-                    <RadioButton Grid.Column="4" Content="Abuelos" x:Name="rbnInViveA" Height="20"/>
-                    <RadioButton Grid.Column="6" Content="Otros" x:Name="rbnInViveO" Height="20"/>
-                    <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" x:Name="txtInViveOtro" Height="20" Margin="10,0,11,1"></TextBox>
+                    <RadioButton Click="rbnInVive1_Click" Grid.Column="0" Content="Padre" x:Name="rbnInViveP" Height="20"/>
+                    <RadioButton Click="rbnInVive1_Click" Grid.Column="2" Content="Madre" x:Name="rbnInViveM" Height="20"/>
+                    <RadioButton Click="rbnInVive1_Click" Grid.Column="4" Content="Abuelos" x:Name="rbnInViveA" Height="20"/>
+                    <RadioButton Click="rbnInViveO_Click" Grid.Column="6" Content="Otros" x:Name="rbnInViveO" Height="20"/>
+                    <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" x:Name="txtInViveOtro" Height="25" Margin="11,1,10,0"></TextBox>
                 </Grid>
             </GroupBox>
             <Button Style="{StaticResource MiEstilo3}"  Click="boton2_Click" Content="Cancelar" Grid.Column="3" Grid.Row="4"  HorizontalAlignment="Center"  VerticalAlignment="Center"   Margin="200,22,200,28" x:Name="BtcancelarC" />
             <Button Style="{StaticResource MiEstilo3}"  Click="boton1_Click"  Content="Aceptar" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"   Margin="203,22,197,28" x:Name="BtaceptarC" />
             <Rectangle Grid.Row="5" Grid.ColumnSpan="4" Fill="AliceBlue" Height="20" VerticalAlignment="Stretch" Grid.Column="1" />
+            <TextBox x:Name="prueba" Grid.Column="1" Height="25" Margin="10,56,436,19"  Grid.Row="4" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-4.34"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
         </Grid>
     </ScrollViewer>
 </Window>
